@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Qurova";
+  src: url("./assets/fonts/Qurova-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Qurova";
+  src: url("./assets/fonts/Qurova-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Qurova";
+  src: url("./assets/fonts/Qurova-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Qurova";
+  src: url("./assets/fonts/Qurova-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Qurova";
+  src: url("./assets/fonts/Qurova-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-p1: #0f0f0f;
+
+  --font-qurova: "Qurova", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply font-qurova;
+  }
+
+  header {
+    @apply w-screen bg-p1;
+  }
+
+  nav ul li {
+    @apply block max-md:hidden;
+  }
+}
